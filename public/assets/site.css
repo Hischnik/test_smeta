@@ -1,0 +1,1076 @@
+/* ==================================================================
+   Метраж — публичная страница сметы
+   ================================================================== */
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/manrope-cyrillic-400.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/manrope-latin-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/manrope-cyrillic-500.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/manrope-latin-500.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/manrope-cyrillic-600.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/manrope-latin-600.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/manrope-cyrillic-700.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/manrope-latin-700.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/manrope-cyrillic-800.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/manrope-latin-800.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-cyrillic-400.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-latin-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-cyrillic-500.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-latin-500.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-cyrillic-600.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-latin-600.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-cyrillic-700.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-latin-700.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --paper: #f4f1e9;
+  --surface: #fffefb;
+  --ink: #1e1d1a;
+  --ink-soft: #39372f;
+  --muted: #6f6a5f;
+  --faint: #9a9386;
+  --line: #e4ded1;
+  --line-soft: #efeae0;
+  --accent: #2e5b4b;
+  --accent-deep: #1f3c31;
+  --accent-soft: #e7efe9;
+  --clay: #b9714b;
+  --clay-soft: #f6e9e0;
+  --font-head: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.public-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(90% 40% at 50% 0%, rgba(255, 255, 255, 0.7), transparent 60%),
+    radial-gradient(rgba(46, 91, 75, 0.055) 1px, transparent 1px),
+    var(--paper);
+  background-size: auto, 26px 26px, auto;
+  padding-bottom: 64px;
+}
+
+.page-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(185, 113, 75, 0.03), transparent 30%);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(46, 91, 75, 0.18);
+}
+
+/* ------------------------------- Шапка ------------------------------- */
+
+.public-topbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 28px 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.brand-mark {
+  display: inline-flex;
+  color: var(--accent);
+}
+
+.brand-mark--sm {
+  color: var(--accent);
+}
+
+.brand-text {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.public-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.badge-quiet {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 38px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-soft {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+.btn-soft:hover {
+  background: #dbe8de;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(46, 91, 75, 0.18);
+}
+
+.btn-primary:hover {
+  background: var(--accent-deep);
+}
+
+/* ------------------------------- Бумага ------------------------------- */
+
+.paper {
+  position: relative;
+  z-index: 1;
+  max-width: 1010px;
+  margin: 0 auto;
+  padding: 54px 58px 40px;
+  background: var(--surface);
+  border: 1px solid rgba(219, 211, 197, 0.8);
+  border-radius: 20px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 30px 70px rgba(52, 43, 29, 0.09);
+}
+
+.paper-head {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.overline {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.paper-head h1 {
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  max-width: 760px;
+}
+
+.paper-address {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 29px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.chip-label {
+  color: var(--faint);
+  font-weight: 500;
+}
+
+.paper-desc {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--clay);
+  border-radius: 0 9px 9px 0;
+  background: var(--clay-soft);
+  color: #6d4a38;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+/* ------------------------------- Сводка ------------------------------- */
+
+.public-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.25fr;
+  gap: 1px;
+  margin-top: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--line);
+}
+
+.summary-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 20px;
+  background: var(--paper);
+}
+
+.summary-label {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.summary-cell strong {
+  font-family: var(--font-head);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.summary-cell--total {
+  background: linear-gradient(150deg, #27362d, #1c2721);
+}
+
+.summary-cell--total .summary-label {
+  color: #9caf9f;
+}
+
+.summary-cell--total strong {
+  color: #f5f1e6;
+  font-size: 23px;
+}
+
+/* ------------------------------- Помещения ------------------------------- */
+
+.rooms {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  margin-top: 36px;
+}
+
+.public-room {
+  padding-top: 2px;
+}
+
+.room-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.room-index {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  width: 22px;
+  flex: 0 0 auto;
+}
+
+.room-head h2 {
+  font-size: 20px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.room-area {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.room-desc {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.group {
+  margin-top: 18px;
+}
+
+.group-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.group-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 17px;
+  padding: 0 5px;
+  border-radius: 5px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  font-size: 9px;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.items-table th {
+  padding: 7px 6px;
+  text-align: left;
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.items-table td {
+  padding: 9px 6px;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.items-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.items-table th:first-child,
+.items-table td:first-child {
+  padding-left: 2px;
+}
+
+.items-table th:last-child,
+.items-table td:last-child {
+  padding-right: 2px;
+}
+
+.items-table .cell-num {
+  width: 26px;
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  padding-top: 11px;
+}
+
+.items-table .num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.line-name {
+  display: block;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.line-detail {
+  display: block;
+  margin-top: 2px;
+  font-size: 9.5px;
+  color: var(--faint);
+  line-height: 1.4;
+}
+
+.cell-sum {
+  font-family: var(--font-head);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cell-price,
+.cell-qty {
+  white-space: nowrap;
+  color: var(--ink-soft);
+}
+
+.cell-unit {
+  color: var(--muted);
+  font-size: 10.5px !important;
+}
+
+.empty-note {
+  padding: 10px 2px;
+  font-size: 11px;
+  color: var(--faint);
+  font-style: italic;
+}
+
+.room-sum {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 1px;
+  margin-top: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--line);
+}
+
+.room-sum > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  background: var(--paper);
+}
+
+.room-sum span {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.room-sum b {
+  font-family: var(--font-head);
+  font-size: 12.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.room-sum-total {
+  background: var(--accent-soft) !important;
+}
+
+.room-sum-total b {
+  color: var(--accent-deep);
+}
+
+/* ------------------------------- Итог ------------------------------- */
+
+.public-grand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 44px;
+  padding: 26px 30px;
+  border-radius: 16px;
+  background:
+    radial-gradient(120% 120% at 100% 0%, rgba(217, 162, 119, 0.16), transparent 55%),
+    linear-gradient(145deg, #27362d, #1b2620);
+  color: #f4f0e5;
+}
+
+.grand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.grand-label {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #9caf9f;
+}
+
+.grand-note {
+  font-size: 11px;
+  color: #a9b9ac;
+}
+
+.grand-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.grand-value span {
+  font-size: 10.5px;
+  color: #9caf9f;
+  white-space: nowrap;
+}
+
+.grand-value strong {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+.public-note {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 10.5px;
+  line-height: 1.6;
+  color: var(--faint);
+}
+
+.public-footer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.public-footer-brand .brand-text {
+  font-size: 14px;
+}
+
+.public-footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  font-size: 10.5px;
+  color: var(--faint);
+}
+
+/* ------------------------------- Сообщение ------------------------------- */
+
+.public-page--message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.message-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 40px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 30px 70px rgba(52, 43, 29, 0.1);
+  text-align: center;
+}
+
+.message-card .brand {
+  justify-content: center;
+  margin-bottom: 26px;
+}
+
+.message-code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--clay);
+  margin-bottom: 8px;
+}
+
+.message-card h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.message-card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.public-page--message .btn {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ------------------------------- Адаптив ------------------------------- */
+
+@media (max-width: 900px) {
+  .paper {
+    margin: 0 16px;
+    padding: 36px 32px 30px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  .public-topbar {
+    padding: 16px 16px 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .public-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .public-actions .badge {
+    order: 3;
+    margin-left: auto;
+  }
+  .public-actions .btn {
+    flex: 1;
+  }
+  .paper {
+    margin: 0 10px;
+    padding: 26px 18px 24px;
+    border-radius: 14px;
+  }
+  .paper-head h1 {
+    font-size: 28px;
+  }
+  .public-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+  .summary-cell--total {
+    grid-column: 1 / -1;
+  }
+  .summary-cell {
+    padding: 14px 16px;
+  }
+  .public-grand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px;
+  }
+  .grand-value {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .grand-value strong {
+    font-size: 32px;
+  }
+  .items-table thead {
+    display: none;
+  }
+  .items-table,
+  .items-table tbody,
+  .items-table tr,
+  .items-table td {
+    display: block;
+    width: auto;
+  }
+  .items-table tr {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .items-table td {
+    padding: 0;
+    border: 0;
+  }
+  .items-table .cell-num {
+    display: none;
+  }
+  .items-table .cell-name {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+  }
+  .items-table .cell-qty,
+  .items-table .cell-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 11.5px;
+  }
+  .items-table .cell-qty::before {
+    content: 'Кол-во, ' attr(data-unit);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  .items-table .cell-price::before {
+    content: 'Цена';
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  .items-table .cell-unit {
+    display: none;
+  }
+  .items-table .cell-sum {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 3px;
+    font-size: 13px;
+  }
+  .items-table .cell-sum::before {
+    content: 'Сумма';
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  .room-sum {
+    grid-template-columns: 1fr;
+  }
+  .room-sum > div {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .public-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .message-card {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .public-actions .badge {
+    display: none;
+  }
+  .chip {
+    height: 27px;
+    font-size: 10.5px;
+  }
+  .summary-cell strong {
+    font-size: 16px;
+  }
+  .summary-cell--total strong {
+    font-size: 21px;
+  }
+}
+
+/* ------------------------------- Печать ------------------------------- */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm 13mm;
+  }
+
+  body,
+  .public-page {
+    background: #fff !important;
+    padding: 0 !important;
+    font-size: 10.5pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .public-topbar,
+  .page-grain,
+  .public-actions {
+    display: none !important;
+  }
+
+  .paper {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .paper-head {
+    padding-bottom: 16px;
+  }
+
+  .paper-head h1 {
+    font-size: 24pt;
+  }
+
+  .paper-desc {
+    break-inside: avoid;
+  }
+
+  .public-summary {
+    break-inside: avoid;
+  }
+
+  .public-room {
+    break-inside: auto;
+  }
+
+  .room-head {
+    break-after: avoid;
+    break-inside: avoid;
+  }
+
+  .group-title {
+    break-after: avoid;
+  }
+
+  .items-table tr {
+    break-inside: avoid;
+  }
+
+  .room-sum {
+    break-inside: avoid;
+  }
+
+  .public-grand {
+    break-inside: avoid;
+    margin-top: 20px;
+    background: #1f2f27 !important;
+  }
+
+  .public-note {
+    break-inside: avoid;
+  }
+
+  .public-footer {
+    break-inside: avoid;
+  }
+
+  .items-table td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .line-detail {
+    font-size: 8pt;
+  }
+}

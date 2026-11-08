@@ -1,0 +1,16 @@
+node_modules/
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/backups/
+data/shots/
+data/pdf-pages/
+data/*.pdf
+data/*.png
+data/*.jpg
+data/edge-profile/
+.env
+.env.local
+*.log
+.DS_Store
+Thumbs.db
